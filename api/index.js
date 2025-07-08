@@ -1,59 +1,23 @@
-const express = require('express');
-const cors = require('cors');
-const helmet = require('helmet');
+module.exports = (req, res) => {
+  // Configurar CORS
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  
+  // Responder a preflight requests
+  if (req.method === 'OPTIONS') {
+    res.status(200).end();
+    return;
+  }
 
-const app = express();
-
-// Middlewares
-app.use(helmet());
-app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-// Rotas básicas
-app.get('/', (req, res) => {
+  // Rota principal da API
   res.json({ 
     message: 'FeedPlanner API está funcionando!',
     version: '1.0.0',
-    timestamp: new Date().toISOString()
-  });
-});
-
-app.get('/api/health', (req, res) => {
-  res.json({ 
-    status: 'OK',
-    message: 'API Health Check',
-    timestamp: new Date().toISOString()
-  });
-});
-
-// Rota de exemplo para planos alimentares
-app.get('/api/feed-plans', (req, res) => {
-  res.json({
-    message: 'Lista de planos alimentares',
-    data: [
-      { id: 1, name: 'Plano Semanal', description: 'Plano alimentar para 7 dias' },
-      { id: 2, name: 'Plano Mensal', description: 'Plano alimentar para 30 dias' }
+    timestamp: new Date().toISOString(),
+    endpoints: [
+      'GET /api/health - Health check',
+      'GET /api/feed-plans - Lista de planos alimentares'
     ]
   });
-});
-
-// Middleware de tratamento de erros
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).json({
-    error: 'Algo deu errado!',
-    message: process.env.NODE_ENV === 'development' ? err.message : 'Erro interno do servidor'
-  });
-});
-
-// Middleware para rotas não encontradas
-app.use('*', (req, res) => {
-  res.status(404).json({
-    error: 'Rota não encontrada',
-    message: `A rota ${req.originalUrl} não existe`
-  });
-});
-
-// Para o Vercel (serverless)
-module.exports = app;
+};
