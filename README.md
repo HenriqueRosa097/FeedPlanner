@@ -15,24 +15,57 @@ FeedPlanner/
 ## Como Executar
 
 ### Pré-requisitos
-- Node.js
+- Node.js (versão 18 ou superior)
 - npm
 
 ### Instalação
 ```bash
+# Instalar dependências de todos os projetos
+npm run install:all
+
+# Ou instalar manualmente
 npm install
+cd client && npm install
+cd ../server && npm install
 ```
 
-### Execução
+### Execução Local
 ```bash
+# Executar em desenvolvimento (client + server)
 npm run dev
+
+# Executar apenas o frontend
+npm run client:dev
+
+# Executar apenas o backend
+npm run server:dev
 ```
+
+### Build para Produção
+```bash
+npm run build
+```
+
+## Deploy no Vercel
+
+Este projeto está configurado para deploy automático no Vercel:
+
+1. **Conecte seu repositório GitHub ao Vercel**
+2. **Configure as variáveis de ambiente no Vercel** (se necessário)
+3. **Deploy automático** - O Vercel detectará o `vercel.json` e fará o deploy
+
+### Configurações do Vercel
+- ✅ Configuração automática via `vercel.json`
+- ✅ Build do frontend (React)
+- ✅ API Routes para o backend (Express)
+- ✅ Roteamento configurado
 
 ## Tecnologias Utilizadas
 
-- Node.js
-- React (Frontend)
-- Express (Backend)
+- **Frontend**: React 18, Create React App
+- **Backend**: Node.js, Express
+- **Deploy**: Vercel
+- **Estilização**: CSS3 com gradientes e backdrop-filter
 
 ## Contribuição
 
@@ -44,4 +77,4 @@ npm run dev
 
 ## Licença
 
-Este projeto está sob a licença MIT.
+Todos os direitos reservados - Henrique Rosa © 2025
