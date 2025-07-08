@@ -1,54 +1,33 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [feedPlans, setFeedPlans] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    fetchFeedPlans();
-  }, []);
-
-  const fetchFeedPlans = async () => {
-    try {
-      setLoading(true);
-      const response = await fetch('/api/feed-plans');
-      if (!response.ok) {
-        throw new Error('Erro ao buscar planos alimentares');
-      }
-      const data = await response.json();
-      setFeedPlans(data.data || []);
-    } catch (err) {
-      setError(err.message);
-      console.error('Erro ao buscar planos:', err);
-    } finally {
-      setLoading(false);
+  const [feedPlans] = useState([
+    { 
+      id: 1, 
+      name: 'Plano Semanal', 
+      description: 'Plano alimentar para 7 dias',
+      duration: '7 dias',
+      meals: ['Café da manhã', 'Almoço', 'Jantar'],
+      status: 'ativo'
+    },
+    { 
+      id: 2, 
+      name: 'Plano Mensal', 
+      description: 'Plano alimentar para 30 dias',
+      duration: '30 dias',
+      meals: ['Café da manhã', 'Lanche', 'Almoço', 'Lanche da tarde', 'Jantar'],
+      status: 'ativo'
+    },
+    { 
+      id: 3, 
+      name: 'Plano Personalizado', 
+      description: 'Plano alimentar customizado',
+      duration: 'Flexível',
+      meals: ['Personalizável'],
+      status: 'em_desenvolvimento'
     }
-  };
-
-  if (loading) {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <h1>🍽️ FeedPlanner</h1>
-          <p>Carregando...</p>
-        </header>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <h1>🍽️ FeedPlanner</h1>
-          <p>Erro: {error}</p>
-          <button onClick={fetchFeedPlans}>Tentar novamente</button>
-        </header>
-      </div>
-    );
-  }
+  ]);
 
   return (
     <div className="App">

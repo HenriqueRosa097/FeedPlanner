@@ -127,30 +127,35 @@
 
 .plan-details {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  gap: 1rem;
   margin-top: 0.5rem;
-  padding-top: 0.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
 }
 
-.duration, .status {
-  font-size: 0.9rem;
+.plan-details span {
   background: rgba(255, 255, 255, 0.1);
-  padding: 0.25rem 0.5rem;
+  padding: 0.2rem 0.5rem;
   border-radius: 8px;
-  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.duration {
+  color: #4ecdc4;
+}
+
+.status {
+  color: #ff6b6b;
 }
 
 .meals {
   margin-top: 0.5rem;
-  padding-top: 0.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-style: italic;
+  opacity: 0.8;
 }
 
 .meals small {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.85rem;
+  color: #fff;
+  font-size: 0.8rem;
 }
 
 button {

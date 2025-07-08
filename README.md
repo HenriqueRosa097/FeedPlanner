@@ -1,26 +1,24 @@
 # 🍽️ FeedPlanner
 
-Sistema de Planejamento de Alimentação desenvolvido com React e Node.js, otimizado para deploy no Vercel.
+Sistema de Planejamento de Alimentação desenvolvido com React, otimizado para deploy no Vercel.
 
-## 📋 Funcionalidades
+## � Demo
+
+Acesse o app em produção: [Seu link do Vercel aqui]
+
+## �📋 Funcionalidades
 
 - ✅ Interface moderna e responsiva
-- ✅ API RESTful com endpoints serverless
-- ✅ Gerenciamento de planos alimentares
+- ✅ Listagem de planos alimentares
+- ✅ Design clean e intuitivo
 - ✅ Deploy automático no Vercel
-- ✅ Configuração otimizada para produção
+- ✅ Totalmente otimizado para produção
 
-## 🚀 Tecnologias
+## �️ Tecnologias
 
-### Frontend
-- React 18.2.0
-- React Router DOM 6.8.1
-- CSS3 com design moderno
-
-### Backend
-- Node.js com Express
-- Serverless Functions (Vercel)
-- API RESTful
+- **React** 18.2.0
+- **CSS3** com design moderno
+- **Vercel** para deploy
 
 ## 📦 Estrutura do Projeto
 
@@ -28,105 +26,80 @@ Sistema de Planejamento de Alimentação desenvolvido com React e Node.js, otimi
 FeedPlanner/
 ├── client/                 # Aplicação React
 │   ├── src/
-│   │   ├── App.js
-│   │   ├── App.css
-│   │   └── index.js
+│   │   ├── App.js         # Componente principal
+│   │   ├── App.css        # Estilos
+│   │   └── index.js       # Ponto de entrada
+│   ├── public/
 │   └── package.json
-├── server/                 # Servidor Express (desenvolvimento)
-│   ├── index.js
-│   └── package.json
-├── api/                    # Funções serverless para produção
-│   ├── index.js
-│   ├── health.js
-│   ├── feed-plans.js
-│   └── package.json
+├── server/                 # Servidor Express (desenvolvimento local)
 ├── vercel.json            # Configuração do Vercel
-├── package.json           # Configuração principal
-└── README.md
+└── package.json           # Scripts principais
 ```
 
-## 🔧 Configuração e Execução
+## 🔧 Executar Localmente
 
-### Desenvolvimento Local
-
-1. Clone o repositório
-2. Instale as dependências:
 ```bash
+# Clone o repositório
+git clone [seu-repo]
+
+# Instale as dependências
+cd FeedPlanner/client
 npm install
-cd client && npm install
-cd ../server && npm install
+
+# Execute o projeto
+npm start
 ```
 
-3. Execute o projeto:
+## 🚀 Deploy no Vercel
+
+### Automático
+1. Conecte seu repositório ao Vercel
+2. O deploy será automático a cada push
+
+### Manual
 ```bash
-npm run dev
+# Instale o Vercel CLI
+npm i -g vercel
+
+# Deploy
+vercel --prod
 ```
 
-### Deploy no Vercel
+## 🎯 Configuração no Vercel
 
-1. **Conecte seu repositório ao Vercel**
-2. **Configure as variáveis de ambiente (se necessário)**
-3. **O deploy será automático**
+Se precisar configurar manualmente:
 
-#### Configuração manual no Vercel:
-
-- **Build Command**: `npm run build`
+- **Build Command**: `cd client && npm run build`
 - **Output Directory**: `client/build`
-- **Install Command**: `npm install`
-
-## 🌐 Endpoints da API
-
-### Produção (Vercel)
-- `GET /api/health` - Health check da API
-- `GET /api/feed-plans` - Lista de planos alimentares
-
-### Desenvolvimento Local
-- `GET http://localhost:3001/api/health` - Health check
-- `GET http://localhost:3001/api/feed-plans` - Lista de planos
+- **Install Command**: `cd client && npm install`
 
 ## 📱 Funcionalidades Implementadas
 
 - [x] Interface de usuário moderna
 - [x] Listagem de planos alimentares
-- [x] API RESTful funcionando
-- [x] Deploy otimizado para Vercel
-- [x] Tratamento de erros
-- [x] Loading states
 - [x] Design responsivo
+- [x] Otimização para produção
+- [x] Deploy automático
 
 ## 🔄 Próximos Passos
 
-- [ ] Autenticação de usuários
-- [ ] CRUD completo de planos
-- [ ] Banco de dados
-- [ ] Notificações
+- [ ] Adicionar mais planos
+- [ ] Sistema de filtros
+- [ ] Modo escuro
 - [ ] PWA (Progressive Web App)
-
-## 🐛 Solução de Problemas
-
-### Deploy no Vercel não funciona?
-
-1. Verifique se o `vercel.json` está correto
-2. Certifique-se de que as dependências estão instaladas
-3. Verifique os logs de build no painel do Vercel
-4. Confirme que a estrutura de pastas está correta
-
-### API não responde?
-
-1. Verifique se os endpoints estão em `/api/`
-2. Confirme que as funções serverless estão funcionando
-3. Teste os endpoints individualmente
+- [ ] Integração com API externa
 
 ## 📞 Suporte
 
-Para problemas ou dúvidas, verifique:
-- [Documentação do Vercel](https://vercel.com/docs)
-- [Documentação do React](https://react.dev)
-- [Documentação do Express](https://expressjs.com)
+Este projeto está configurado para funcionar perfeitamente no Vercel. Se você encontrar algum problema:
+
+1. Verifique se todas as dependências estão instaladas
+2. Confirme que o build local funciona (`npm run build`)
+3. Verifique os logs de deployment no Vercel
 
 ---
 
-**Desenvolvido com ❤️ para facilitar o planejamento alimentar**eedPlanner
+**Desenvolvido com ❤️ - Otimizado para Vercel**eedPlanner
 
 Sistema de planejamento de alimentação.
 

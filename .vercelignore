@@ -1,13 +1,6 @@
-server/
-api/
-pages/
-build.js
+node_modules/
 .git/
 .vscode/
-node_modules/
 *.log
 .env.local
 .DS_Store
-now.json
-_app.js
-package-root.json

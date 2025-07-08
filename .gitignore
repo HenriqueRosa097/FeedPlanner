@@ -8,6 +8,9 @@ yarn-error.log*
 /build
 /dist
 
+# Git submodules (if any)
+.git/modules/
+
 # Environment variables
 .env
 .env.local

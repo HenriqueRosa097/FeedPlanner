@@ -1,2 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Prevent git submodule issues
+.gitmodules text eol=lf
