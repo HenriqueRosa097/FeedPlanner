@@ -1,181 +1,408 @@
 # 🍽️ FeedPlanner
 
-Sistema de Planejamento de Alimentação desenvolvido com React, otimizado para deploy no Vercel.
+Um aplicativo web completo para planejamento alimentar e financeiro, desenvolvido com React.js e Node.js.
 
-## � Demo
+## 📋 Sobre o Projeto
 
-Acesse o app em produção: [Seu link do Vercel aqui]
+O FeedPlanner é uma aplicação web que ajuda usuários a planejar suas refeições, gerenciar orçamentos alimentares e conectar-se com nutricionistas. O projeto demonstra conceitos fundamentais de desenvolvimento full-stack moderno.
 
-## �📋 Funcionalidades
+### ✨ Funcionalidades Principais
 
-- ✅ Interface moderna e responsiva
-- ✅ Listagem de planos alimentares
-- ✅ Design clean e intuitivo
-- ✅ Deploy automático no Vercel
-- ✅ Totalmente otimizado para produção
+- **🔐 Sistema de Login** - Autenticação simulada para demonstração
+- **📊 Calculadora TMB** - Cálculo da Taxa Metabólica Basal usando fórmula Harris-Benedict
+- **📅 Planejamento de Refeições** - Dashboard completo para organizar refeições semanais
+- **💰 Controle de Orçamento** - Planejamento financeiro para compras alimentares
+- **👩‍⚕️ Rede de Nutricionistas** - Conexão com profissionais qualificados
+- **⭐ Planos Premium** - Sistema de assinatura com benefícios exclusivos
 
-## �️ Tecnologias
+### 🛠️ Tecnologias Utilizadas
 
-- **React** 18.2.0
-- **CSS3** com design moderno
-- **Vercel** para deploy
+**Frontend:**
+- React.js 18
+- React Router DOM
+- CSS3 Responsivo
+- Hooks e Context API
 
-## 📦 Estrutura do Projeto
+**Backend:**
+- Node.js
+- Express.js
+- CORS
+- API RESTful
+
+**Desenvolvimento:**
+- Concurrently (desenvolvimento simultâneo)
+- Mock data para demonstração
+- Responsive design mobile-first
+
+## 🚀 Como Executar
+
+### Pré-requisitos
+
+- Node.js (versão 14 ou superior)
+- npm ou yarn
+
+### Instalação
+
+1. **Clone o repositório:**
+```bash
+git clone https://github.com/seu-usuario/FeedPlanner.git
+cd FeedPlanner
+```
+
+2. **Instale as dependências do projeto:**
+```bash
+npm install
+```
+
+3. **Instale as dependências do cliente:**
+```bash
+cd client
+npm install
+cd ..
+```
+
+4. **Instale as dependências do servidor:**
+```bash
+cd server
+npm install
+cd ..
+```
+
+### Executando o Projeto
+
+**Opção 1: Executar tudo simultaneamente (recomendado)**
+```bash
+npm run dev
+```
+
+**Opção 2: Executar separadamente**
+```bash
+# Terminal 1 - Backend
+npm run server
+
+# Terminal 2 - Frontend  
+npm run client
+```
+
+### Acessando a Aplicação
+
+- **Frontend**: http://localhost:3000
+- **Backend API**: http://localhost:5000
+
+### Credenciais de Teste
+
+- **Email**: teste@exemplo.com
+- **Senha**: 123456
+
+## 📁 Estrutura do Projeto
 
 ```
 FeedPlanner/
-├── client/                 # Aplicação React
-│   ├── src/
-│   │   ├── App.js         # Componente principal
-│   │   ├── App.css        # Estilos
-│   │   └── index.js       # Ponto de entrada
+├── client/                 # Frontend React
 │   ├── public/
+│   │   └── images/        # Imagens e assets
+│   ├── src/
+│   │   ├── components/    # Componentes reutilizáveis
+│   │   ├── pages/         # Páginas da aplicação
+│   │   ├── images/        # Imagens importadas
+│   │   ├── App.js         # Componente principal
+│   │   └── index.js       # Ponto de entrada
 │   └── package.json
-├── server/                 # Servidor Express (desenvolvimento local)
-├── vercel.json            # Configuração do Vercel
-└── package.json           # Scripts principais
+├── server/                 # Backend Node.js
+│   ├── server.js          # Servidor Express
+│   └── package.json
+├── package.json           # Scripts de desenvolvimento
+└── README.md
 ```
 
-## 🔧 Executar Localmente
+## 🎯 Páginas Implementadas
 
-```bash
-# Clone o repositório
-git clone [seu-repo]
+- **🏠 Home** (`/`) - Página inicial com apresentação
+- **ℹ️ Sobre** (`/sobre`) - Informações sobre o projeto e desenvolvedor
+- **🔐 Login** (`/login`) - Sistema de autenticação
+- **📊 Cadastro** (`/cadastro`) - Registro e cálculo TMB
+- **📋 Planner** (`/planner`) - Dashboard principal de planejamento
+- **👩‍⚕️ Nutricionistas** (`/nutricionistas`) - Rede de profissionais
+- **⭐ Plus** (`/plus`) - Planos de assinatura
 
-# Instale as dependências
-cd FeedPlanner/client
-npm install
+## 🔧 API Endpoints
 
-# Execute o projeto
-npm start
-```
+- `POST /api/login` - Autenticação de usuário
+- `GET /api/nutricionistas` - Lista de nutricionistas
+- `GET /api/planner/meals` - Planos de refeições
+- `GET /api/planner/shopping-list` - Lista de compras
+- `POST /api/planner/budget` - Planejamento de orçamento
+- `POST /api/user/tmb` - Cálculo TMB
 
-## 🚀 Deploy no Vercel
+## 👨‍💻 Sobre o Desenvolvedor
 
-### Automático
-1. Conecte seu repositório ao Vercel
-2. O deploy será automático a cada push
+**Henrique Silva da Rosa**
+- Formado pela Uniritter
+- Cursando Pós-Graduação em Desenvolvimento Full Stack na PUCRS
+- Criador do FeedPlanner
 
-### Manual
-```bash
-# Instale o Vercel CLI
-npm i -g vercel
+## 📝 Licença
 
-# Deploy
-vercel --prod
-```
+Este projeto é um MVP educacional desenvolvido para demonstrar conceitos de desenvolvimento full-stack.
 
-## 🎯 Configuração no Vercel
+## 🤝 Contribuições
 
-Se precisar configurar manualmente:
+Contribuições são sempre bem-vindas! Sinta-se à vontade para:
 
-- **Build Command**: `cd client && npm run build`
-- **Output Directory**: `client/build`
-- **Install Command**: `cd client && npm install`
+1. Fazer um fork do projeto
+2. Criar uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abrir um Pull Request
 
-## 📱 Funcionalidades Implementadas
+## 📧 Contato
 
-- [x] Interface de usuário moderna
-- [x] Listagem de planos alimentares
-- [x] Design responsivo
-- [x] Otimização para produção
-- [x] Deploy automático
-
-## 🔄 Próximos Passos
-
-- [ ] Adicionar mais planos
-- [ ] Sistema de filtros
-- [ ] Modo escuro
-- [ ] PWA (Progressive Web App)
-- [ ] Integração com API externa
-
-## 📞 Suporte
-
-Este projeto está configurado para funcionar perfeitamente no Vercel. Se você encontrar algum problema:
-
-1. Verifique se todas as dependências estão instaladas
-2. Confirme que o build local funciona (`npm run build`)
-3. Verifique os logs de deployment no Vercel
+Para dúvidas ou sugestões sobre o projeto, entre em contato através do GitHub.
 
 ---
 
-**Desenvolvido com ❤️ - Otimizado para Vercel**eedPlanner
+⭐ Se este projeto foi útil para você, considere dar uma estrela!
 
-Sistema de planejamento de alimentação.
+- ✅ Planejamento de refeições semanais
+- ✅ Organização de listas de compras
+- ✅ Cálculo de Taxa Metabólica Basal (TMB)
+- ✅ Gerenciamento de orçamento alimentar
+- ✅ Agendamento com nutricionistas (simulado)
+- ✅ Sugestões personalizadas de alimentação
 
-## Estrutura do Projeto
+**⚠️ IMPORTANTE: Este é um projeto educacional com funcionalidades simuladas. Nenhum dado real é processado, armazenado ou cobrado.**
+
+## 🚀 Tecnologias Utilizadas
+
+### Frontend
+- **React.js** - Biblioteca para interfaces de usuário
+- **React Router DOM** - Roteamento client-side
+- **CSS3** - Estilização responsiva e moderna
+
+### Backend
+- **Node.js** - Runtime JavaScript
+- **Express.js** - Framework web para APIs
+- **CORS** - Middleware para requisições cross-origin
+
+### Ferramentas de Desenvolvimento
+- **Concurrently** - Execução simultânea de servidores
+- **Nodemon** - Auto-reload do servidor (desenvolvimento)
+
+## 📁 Estrutura do Projeto
 
 ```
-FeedPlanner/
-├── client/          # Frontend da aplicação
-├── server/          # Backend da aplicação
-├── FeedPlanner/     # Aplicação principal
-└── README.md        # Este arquivo
+planner-alimentar/
+├── client/                 # Aplicação React (Frontend)
+│   ├── public/            # Arquivos públicos
+│   ├── src/
+│   │   ├── components/    # Componentes reutilizáveis
+│   │   ├── pages/         # Páginas da aplicação
+│   │   ├── App.js         # Componente principal
+│   │   └── index.js       # Entry point
+│   └── package.json
+├── server/                # API Node.js (Backend)
+│   ├── index.js          # Servidor Express
+│   └── package.json
+├── package.json          # Scripts principais
+└── README.md
 ```
 
-## Como Executar
+## 🛠️ Instalação e Configuração
 
 ### Pré-requisitos
-- Node.js (versão 18 ou superior)
-- npm
+- Node.js (versão 14 ou superior)
+- npm ou yarn
 
-### Instalação
-```bash
-# Instalar dependências de todos os projetos
-npm run install:all
+### Passo a Passo
 
-# Ou instalar manualmente
-npm install
-cd client && npm install
-cd ../server && npm install
-```
+1. **Clone o repositório**
+   ```bash
+   git clone [url-do-repositorio]
+   cd planner-alimentar
+   ```
 
-### Execução Local
-```bash
-# Executar em desenvolvimento (client + server)
-npm run dev
+2. **Instale as dependências**
+   ```bash
+   npm run install-all
+   ```
+   Ou instale separadamente:
+   ```bash
+   # Root
+   npm install
+   
+   # Frontend
+   cd client && npm install
+   
+   # Backend
+   cd ../server && npm install
+   ```
 
-# Executar apenas o frontend
-npm run client:dev
+3. **Execute a aplicação**
+   ```bash
+   npm run dev
+   ```
 
-# Executar apenas o backend
-npm run server:dev
-```
+## 📚 Scripts Disponíveis
 
-### Build para Produção
-```bash
-npm run build
-```
+- `npm run dev` - Inicia frontend e backend simultaneamente
+- `npm run client` - Inicia apenas o servidor React (porta 3000)
+- `npm run server` - Inicia apenas o servidor Node.js (porta 5000)
+- `npm run build` - Gera build de produção do frontend
+- `npm run install-all` - Instala dependências de todos os projetos
 
-## Deploy no Vercel
+## 🌐 Páginas e Funcionalidades
 
-Este projeto está configurado para deploy automático no Vercel:
+### 🏠 Página Inicial (`/`)
+- Apresentação do projeto e suas funcionalidades
+- Links para navegação rápida
+- Design responsivo e atrativo
 
-1. **Conecte seu repositório GitHub ao Vercel**
-2. **Configure as variáveis de ambiente no Vercel** (se necessário)
-3. **Deploy automático** - O Vercel detectará o `vercel.json` e fará o deploy
+### ℹ️ Sobre (`/sobre`)
+- Descrição detalhada dos objetivos do projeto
+- Tecnologias utilizadas
+- Disclaimer sobre a natureza educacional
 
-### Configurações do Vercel
-- ✅ Configuração automática via `vercel.json`
-- ✅ Build do frontend (React)
-- ✅ API Routes para o backend (Express)
-- ✅ Roteamento configurado
+### 🔐 Login (`/login`)
+- **Credenciais de teste:** 
+  - Email: `teste@exemplo.com`
+  - Senha: `123456`
+- Validação com feedback visual
+- Redirecionamento para o planner após login
 
-## Tecnologias Utilizadas
+### 📊 Cadastro e TMB (`/cadastro`)
+- Formulário com dados pessoais
+- Cálculo automático da TMB usando fórmula Harris-Benedict
+- Validação em tempo real dos campos
 
-- **Frontend**: React 18, Create React App
-- **Backend**: Node.js, Express
-- **Deploy**: Vercel
-- **Estilização**: CSS3 com gradientes e backdrop-filter
+### 📋 Meu Planner (`/planner`)
+- **Dashboard** com resumo semanal
+- **Lista de Compras** interativa
+- **Planejamento de Refeições** por dia da semana
+- **Orçamento Mensal** com divisão semanal automática
 
-## Contribuição
+### 👩‍⚕️ Nutricionistas (`/nutricionistas`)
+- Grid de profissionais fictícios
+- Informações detalhadas (horários, especialidades)
+- Sistema de agendamento simulado
 
-1. Faça o fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
+### ⭐ Plano Plus (`/plus`)
+- Comparação entre planos básico e premium
+- Funcionalidades exclusivas do plano pago
+- Simulação de processo de assinatura
+
+## 🎯 API Endpoints (Backend)
+
+### Autenticação
+- `POST /api/login` - Login com credenciais mockadas
+
+### Planner
+- `GET /api/planner/shopping-list` - Lista de compras
+- `GET /api/planner/meals` - Planejamento de refeições
+- `GET /api/planner/suggestions` - Sugestões saudáveis
+- `POST /api/planner/budget` - Cálculo de orçamento
+
+### Nutricionistas
+- `GET /api/nutricionistas` - Lista de profissionais
+- `POST /api/nutricionistas/agendar` - Agendamento de consulta
+
+### Usuário
+- `POST /api/user/tmb` - Cálculo de TMB
+- `POST /api/user/save` - Salvamento de dados (mock)
+
+### Assinatura
+- `POST /api/plus/subscribe` - Assinatura do plano Plus (mock)
+
+## 🎨 Design e UX
+
+### Paleta de Cores
+- **Primária:** #5cb85c (Verde principal)
+- **Secundária:** #2c5530 (Verde escuro)
+- **Accent:** #a8d5ba (Verde claro)
+- **Background:** #f8f9fa (Cinza claro)
+
+### Características do Design
+- Interface limpa e moderna
+- Navegação intuitiva
+- Feedback visual em todas as interações
+- Design responsivo (mobile-first)
+- Animações suaves e transições
+- Iconografia consistente com emojis
+
+## 🔒 Aspectos de Segurança (Simulados)
+
+- Validação de formulários no frontend
+- Tratamento de erros com fallbacks
+- Headers CORS configurados
+- Sanitização de inputs (simulada)
+
+**Nota:** Como se trata de um MVP educacional, as práticas de segurança são demonstrativas.
+
+## 📱 Responsividade
+
+A aplicação foi desenvolvida com abordagem mobile-first:
+- Breakpoints para tablets (768px)
+- Layout flexível com CSS Grid e Flexbox
+- Navegação adaptativa
+- Componentes redimensionáveis
+
+## 🧪 Dados de Teste
+
+### Login
+- Email: `teste@exemplo.com`
+- Senha: `123456`
+
+### TMB (exemplo)
+- Homem, 30 anos, 80kg, 180cm = ~1.896 cal/dia
+- Mulher, 25 anos, 65kg, 165cm = ~1.447 cal/dia
+
+### Orçamento
+- Entrada: R$ 800/mês
+- Resultado: R$ 200/semana com distribuição por categoria
+
+## 🚀 Próximos Passos (Roadmap)
+
+Para transformar este MVP em uma aplicação completa:
+
+### Backend
+- [ ] Implementar autenticação JWT real
+- [ ] Integração com banco de dados (MongoDB/PostgreSQL)
+- [ ] APIs de pagamento (Stripe/PagSeguro)
+- [ ] Sistema de upload de imagens
+- [ ] Integração com APIs de nutrição
+
+### Frontend
+- [ ] Progressive Web App (PWA)
+- [ ] Notificações push
+- [ ] Modo offline
+- [ ] Tema escuro/claro
+- [ ] Internacionalização (i18n)
+
+### Funcionalidades
+- [ ] Integração com calendário
+- [ ] Relatórios em PDF
+- [ ] Gráficos de progresso
+- [ ] Chat com nutricionistas
+- [ ] Receitas com instruções passo a passo
+
+## 🤝 Contribuindo
+
+Este é um projeto educacional, mas contribuições são bem-vindas:
+
+1. Fork o projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/nova-funcionalidade`)
+3. Commit suas mudanças (`git commit -m 'Adiciona nova funcionalidade'`)
+4. Push para a branch (`git push origin feature/nova-funcionalidade`)
 5. Abra um Pull Request
 
-## Licença
+## 📄 Licença
 
-Todos os direitos reservados - Henrique Rosa © 2025
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## 📞 Contato
+
+**Desenvolvido por:** TCC Henrique  
+**Propósito:** Projeto educacional - MVP para demonstração de conceitos full-stack
+
+---
+
+**⚠️ Disclaimer:** Este é um projeto educacional com funcionalidades simuladas. Nenhum dado pessoal é coletado, armazenado ou processado. Todas as transações financeiras e agendamentos são fictícios.

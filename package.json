@@ -1,13 +1,26 @@
 {
-  "name": "feedplanner",
+  "name": "planner-alimentar",
   "version": "1.0.0",
-  "private": true,
+  "description": "FeedPlanner - Educational MVP for food planning and budgeting",
+  "main": "server/index.js",
   "scripts": {
-    "build": "cd client && npm install && npm run build",
-    "start": "cd client && npm start",
-    "dev": "cd client && npm start"
+    "dev": "npx concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm start",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "vercel-build": "cd client && npm install && npm run build",
+    "install-all": "npm install && cd client && npm install && cd ../server && npm install"
   },
-  "engines": {
-    "node": ">=18.0.0"
+  "keywords": [
+    "food-planning",
+    "react",
+    "nodejs",
+    "educational",
+    "mvp"
+  ],
+  "author": "TCC Henrique",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }

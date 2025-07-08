@@ -1,0 +1,371 @@
+.sobre {
+  min-height: calc(100vh - 80px);
+  background-color: #f8f9fa;
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.sobre-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+}
+
+.sobre-header h1 {
+  font-size: 3rem;
+  color: #2c5530;
+  margin-bottom: 1rem;
+}
+
+.header-icon {
+  font-size: 4rem;
+  margin-top: 1rem;
+}
+
+.sobre-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.content-box {
+  background: white;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.main-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #444;
+  text-align: justify;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.benefits-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  text-align: justify;
+  margin-bottom: 1.5rem;
+  background: #f0f8f0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #5cb85c;
+}
+
+.premium-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  text-align: justify;
+  margin: 0;
+  background: #fff8e1;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #ffc107;
+}
+
+.features-showcase {
+  background: white;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.features-showcase h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2c5530;
+  margin-bottom: 2rem;
+}
+
+.objectives-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.objective-item {
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.objective-item:hover {
+  transform: translateY(-5px);
+  background-color: #e9f7ef;
+}
+
+.objective-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.objective-item h3 {
+  color: #2c5530;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.objective-item p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.technology-section {
+  background: white;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.technology-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2c5530;
+  margin-bottom: 2rem;
+}
+
+.tech-stack {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #2c5530;
+  transition: all 0.3s ease;
+}
+
+.tech-item:hover {
+  background-color: #5cb85c;
+  color: white;
+  transform: translateY(-3px);
+}
+
+.tech-icon {
+  font-size: 1.5rem;
+}
+
+.disclaimer-section {
+  margin-top: 2rem;
+}
+
+.disclaimer-box {
+  background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+  border: 2px solid #f39c12;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.disclaimer-box h3 {
+  color: #e67e22;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.disclaimer-box p {
+  color: #d35400;
+  font-size: 1.1rem;
+  margin: 0;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* Developer Section */
+.developer-section {
+  background: white;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-top: 2rem;
+}
+
+.developer-section h2 {
+  text-align: center;
+  color: #2c5530;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.developer-info {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.developer-photo {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  background: linear-gradient(135deg, #5cb85c, #4cae4c);
+}
+
+.developer-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+.developer-details h3 {
+  color: #2c5530;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.developer-title {
+  color: #5cb85c;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.developer-bio {
+  margin-bottom: 2rem;
+}
+
+.developer-bio p {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.developer-education {
+  margin-bottom: 2rem;
+}
+
+.developer-education h4 {
+  color: #2c5530;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.education-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #5cb85c;
+}
+
+.education-icon {
+  font-size: 1.8rem;
+  margin-top: 0.2rem;
+}
+
+.education-info strong {
+  color: #2c5530;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.education-info p {
+  color: #555;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.education-status {
+  display: inline-block;
+  background: #fff3cd;
+  color: #856404;
+  padding: 0.2rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .sobre-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .header-icon {
+    font-size: 3rem;
+  }
+  
+  .content-box,
+  .features-showcase,
+  .technology-section {
+    padding: 2rem;
+  }
+  
+  .main-description {
+    font-size: 1.1rem;
+  }
+  
+  .features-showcase h2,
+  .technology-section h2 {
+    font-size: 2rem;
+  }
+  
+  .objectives-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tech-stack {
+    gap: 1rem;
+  }
+  
+  .tech-item {
+    padding: 0.8rem 1.2rem;
+  }
+  
+  .developer-info {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .developer-photo {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  
+  .developer-section {
+    padding: 2rem;
+  }
+  
+  .developer-section h2 {
+    font-size: 2rem;
+  }
+  
+  .developer-details h3 {
+    font-size: 1.8rem;
+  }
+}
