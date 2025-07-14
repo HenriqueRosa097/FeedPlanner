@@ -1,7 +1,6 @@
 {
   "name": "feedplanner",
   "version": "1.0.0",
-  "type": "module",
   "description": "FeedPlanner - Planejamento alimentar e financeiro",
   "main": "index.js",
   "scripts": {
