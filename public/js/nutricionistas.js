@@ -7,19 +7,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async function carregarNutricionistas() {
         try {
+            console.log('🔍 Carregando nutricionistas...');
             const response = await fetch('/api/nutricionistas');
-            const data = await response.json();
-
-            if (response.ok) {
-                nutricionistasData = data;
-                renderizarNutricionistas(data);
-            } else {
-                throw new Error('Erro ao carregar dados');
+            console.log('📡 Response status:', response.status);
+            
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
             }
+            
+            const data = await response.json();
+            console.log('✅ Nutricionistas carregados:', data);
+
+            nutricionistasData = data;
+            renderizarNutricionistas(data);
         } catch (error) {
-            console.error('Erro ao carregar nutricionistas:', error);
+            console.error('❌ Erro ao carregar nutricionistas:', error);
             loading.classList.add('hidden');
             errorMessage.classList.remove('hidden');
+            errorMessage.textContent = `Erro: ${error.message}`;
         }
     }
 
