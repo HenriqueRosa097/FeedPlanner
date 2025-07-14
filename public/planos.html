@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planos Premium - FeedPlanner</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/planos.css">
+</head>
+<body>
+    <header>
+        <h1>FeedPlanner</h1>
+        <p>Planejamento alimentar e financeiro inteligente</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Login</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="cadastro.html">Cadastro</a></li>
+            <li><a href="nutricionistas.html">Nutricionistas</a></li>
+            <li><a href="meu-planner.html">Meu Planner</a></li>
+            <li><a href="planos.html">Planos</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="container">
+                <h1>Desbloqueie todo o potencial do seu planejamento alimentar</h1>
+                <p class="hero-subtitle">Evolua seu FeedPlanner com recursos avançados de análise, personalização e controle financeiro</p>
+            </div>
+        </section>
+
+        <section class="plans-section">
+            <div class="container">
+                <div class="plans-grid">
+                    <!-- Plano Gratuito -->
+                    <div class="plan-card plan-free">
+                        <div class="plan-header">
+                            <h3>Plano Gratuito</h3>
+                            <div class="plan-price">
+                                <span class="price">R$ 0</span>
+                                <span class="period">/mês</span>
+                            </div>
+                        </div>
+                        
+                        <div class="plan-features">
+                            <h4>Funcionalidades incluídas:</h4>
+                            <ul>
+                                <li>✅ Planner básico de refeições</li>
+                                <li>✅ Lista de compras simples</li>
+                                <li>✅ Consulta com nutricionistas</li>
+                                <li>✅ Receitas básicas</li>
+                                <li>✅ Suporte por email</li>
+                            </ul>
+                        </div>
+
+                        <button class="plan-btn plan-btn-free" disabled>
+                            Plano Atual
+                        </button>
+                    </div>
+
+                    <!-- Plano Plus -->
+                    <div class="plan-card plan-plus featured">
+                        <div class="featured-badge">Mais Popular</div>
+                        <div class="plan-header">
+                            <h3>FeedPlanner Plus</h3>
+                            <div class="plan-price">
+                                <span class="price">R$ 19,90</span>
+                                <span class="period">/mês</span>
+                            </div>
+                            <div class="plan-discount">7 dias grátis</div>
+                        </div>
+                        
+                        <div class="plan-features">
+                            <h4>Tudo do gratuito, mais:</h4>
+                            <ul>
+                                <li>📊 <strong>Análise Nutricional Avançada</strong><br>
+                                    <small>Relatórios detalhados de macronutrientes, vitaminas e minerais</small>
+                                </li>
+                                <li>💰 <strong>Controle Financeiro Inteligente</strong><br>
+                                    <small>Monitore gastos com alimentação e otimize seu orçamento</small>
+                                </li>
+                                <li>📈 <strong>Histórico e Tendências</strong><br>
+                                    <small>Acompanhe sua evolução alimentar com gráficos e estatísticas</small>
+                                </li>
+                                <li>🎯 <strong>Planos Personalizados</strong><br>
+                                    <small>Cardápios adaptados aos seus objetivos (perda de peso, ganho de massa, etc.)</small>
+                                </li>
+                                <li>🛒 <strong>Lista de Compras Inteligente</strong><br>
+                                    <small>Sugestões de melhores preços e promoções em supermercados</small>
+                                </li>
+                                <li>⚡ <strong>Planejamento Rápido</strong><br>
+                                    <small>Templates prontos para diferentes estilos alimentares</small>
+                                </li>
+                                <li>📱 <strong>Sincronização Multi-dispositivos</strong><br>
+                                    <small>Acesse seus planos em qualquer lugar</small>
+                                </li>
+                                <li>🔔 <strong>Lembretes Inteligentes</strong><br>
+                                    <small>Notificações para compras, preparo de refeições e hidratação</small>
+                                </li>
+                                <li>📞 <strong>Suporte Prioritário</strong><br>
+                                    <small>Chat direto e suporte por WhatsApp</small>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <button class="plan-btn plan-btn-plus" onclick="abrirModalAssinatura()">
+                            Assinar FeedPlanner Plus
+                        </button>
+                    </div>
+
+                    <!-- Plano Premium -->
+                    <div class="plan-card plan-premium">
+                        <div class="plan-header">
+                            <h3>FeedPlanner Premium</h3>
+                            <div class="plan-price">
+                                <span class="price">R$ 39,90</span>
+                                <span class="period">/mês</span>
+                            </div>
+                        </div>
+                        
+                        <div class="plan-features">
+                            <h4>Tudo do Plus, mais:</h4>
+                            <ul>
+                                <li>👨‍⚕️ <strong>Consultas Ilimitadas</strong><br>
+                                    <small>Acesso ilimitado a todos os nutricionistas da plataforma</small>
+                                </li>
+                                <li>🔬 <strong>Análise de Exames</strong><br>
+                                    <small>Upload e interpretação de exames laboratoriais</small>
+                                </li>
+                                <li>👥 <strong>Planos Familiares</strong><br>
+                                    <small>Gerencie a alimentação de até 6 pessoas</small>
+                                </li>
+                                <li>🏥 <strong>Integração com Clínicas</strong><br>
+                                    <small>Sincronização com prontuários médicos</small>
+                                </li>
+                                <li>📚 <strong>Biblioteca Premium</strong><br>
+                                    <small>Acesso a cursos e workshops exclusivos</small>
+                                </li>
+                                <li>🎯 <strong>Coaching Personalizado</strong><br>
+                                    <small>Acompanhamento semanal com especialistas</small>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <button class="plan-btn plan-btn-premium" onclick="abrirModalAssinatura('premium')">
+                            Assinar Premium
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits-section">
+            <div class="container">
+                <h2>Por que escolher o FeedPlanner Plus?</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">💡</div>
+                        <h3>Mais Eficiência</h3>
+                        <p>Economize tempo com planejamento automático e sugestões inteligentes baseadas no seu perfil.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">💰</div>
+                        <h3>Economia Real</h3>
+                        <p>Controle seus gastos com alimentação e descubra onde você pode economizar até 30% no supermercado.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">📊</div>
+                        <h3>Resultados Visíveis</h3>
+                        <p>Acompanhe sua evolução com relatórios detalhados e gráficos que mostram seu progresso.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🎯</div>
+                        <h3>Personalização Total</h3>
+                        <p>Planos alimentares adaptados aos seus objetivos, restrições e preferências pessoais.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2>Perguntas Frequentes</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>Posso cancelar a qualquer momento?</h3>
+                        <p>Sim! Você pode cancelar sua assinatura a qualquer momento sem multas ou taxas adicionais.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Como funciona o período grátis?</h3>
+                        <p>Você tem 7 dias para testar todas as funcionalidades do Plus gratuitamente. Se não gostar, cancele sem custos.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Posso mudar de plano depois?</h3>
+                        <p>Claro! Você pode fazer upgrade ou downgrade do seu plano a qualquer momento.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Os dados ficam salvos se eu cancelar?</h3>
+                        <p>Seus dados básicos ficam salvos por 6 meses. Você pode reativar e recuperar tudo a qualquer momento.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de Assinatura -->
+    <div id="modal-assinatura" class="modal-overlay hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Assinar FeedPlanner Plus</h3>
+                <button class="modal-close" onclick="fecharModal()">&times;</button>
+            </div>
+            
+            <div class="subscription-form">
+                <div class="plan-summary">
+                    <div class="plan-info">
+                        <h4 id="plan-name">FeedPlanner Plus</h4>
+                        <div class="plan-pricing">
+                            <span id="plan-price">R$ 19,90</span>/mês
+                        </div>
+                        <p class="trial-info">7 dias grátis • Cancele a qualquer momento</p>
+                    </div>
+                </div>
+
+                <form class="payment-form">
+                    <div class="form-group">
+                        <label>Nome Completo</label>
+                        <input type="text" placeholder="Seu nome completo" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="seu@email.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>CPF</label>
+                        <input type="text" placeholder="000.000.000-00" required>
+                    </div>
+
+                    <div class="payment-method">
+                        <h4>Método de Pagamento</h4>
+                        <div class="payment-options">
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="credit" checked>
+                                <span>💳 Cartão de Crédito</span>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="pix">
+                                <span>📱 PIX</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div id="credit-card-form" class="credit-card-form">
+                        <div class="form-group">
+                            <label>Número do Cartão</label>
+                            <input type="text" placeholder="0000 0000 0000 0000" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Validade</label>
+                                <input type="text" placeholder="MM/AA" required>
+                            </div>
+                            <div class="form-group">
+                                <label>CVV</label>
+                                <input type="text" placeholder="000" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="subscribe-btn" onclick="processarAssinatura(event)">
+                        Iniciar Período Grátis
+                    </button>
+                </form>
+
+                <div class="terms">
+                    <p><small>Ao assinar, você concorda com nossos <a href="#">Termos de Uso</a> e <a href="#">Política de Privacidade</a>.</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/planos.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeedPlanner - Meu Planner</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/planner.css">
+</head>
+<body>
+    <header>
+        <h1>FeedPlanner</h1>
+        <p>Seu planejamento alimentar e financeiro pessoal</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Login</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="cadastro.html">Cadastro</a></li>
+            <li><a href="nutricionistas.html">Nutricionistas</a></li>
+            <li><a href="meu-planner.html">Meu Planner</a></li>
+            <li><a href="planos.html">Planos</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Sistema de Orçamento -->
+        <div class="card">
+            <h2>💰 Orçamento Mensal</h2>
+            <div class="budget-section">
+                <div class="form-group">
+                    <label for="renda-mercado">Renda destinada ao mercado (R$):</label>
+                    <input type="number" id="renda-mercado" placeholder="Ex: 800" step="0.01" min="0">
+                </div>
+                <div id="budget-result" class="budget-result hidden">
+                    <!-- Resultado do orçamento será exibido aqui -->
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-2">
+            <!-- Lista de Compras -->
+            <div class="card">
+                <h2>🛒 Lista de Compras</h2>
+                <div id="loading-shopping" class="text-center">
+                    <p>Carregando lista de compras...</p>
+                </div>
+                <div id="shopping-list" class="hidden">
+                    <!-- Lista será carregada via JavaScript -->
+                </div>
+            </div>
+
+            <!-- Sugestões de Alimentos Saudáveis -->
+            <div class="card">
+                <h2>🥗 Sugestões de Alimentos Saudáveis</h2>
+                <div class="suggestions">
+                    <ul class="list">
+                        <li class="list-item">🥬 Folhas verdes (espinafre, couve, alface)</li>
+                        <li class="list-item">🥕 Cenoura e beterraba</li>
+                        <li class="list-item">🐟 Peixes ricos em ômega-3 (salmão, sardinha)</li>
+                        <li class="list-item">🥑 Abacate e oleaginosas</li>
+                        <li class="list-item">🍓 Frutas vermelhas (morango, mirtilo)</li>
+                        <li class="list-item">🥜 Castanhas e nozes</li>
+                        <li class="list-item">🍠 Batata doce e quinoa</li>
+                        <li class="list-item">🥛 Iogurte natural sem açúcar</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Refeições Diárias -->
+        <div class="card">
+            <h2>📅 Planejamento de Refeições Semanais</h2>
+            <div id="loading-meals" class="text-center">
+                <p>Carregando planejamento de refeições...</p>
+            </div>
+            <div id="meals-container" class="hidden">
+                <!-- Refeições serão carregadas via JavaScript -->
+            </div>
+        </div>
+
+        <!-- Funcionalidades Premium (Bloqueadas) -->
+        <div class="card premium-features">
+            <div class="premium-header">
+                <h2>⭐ Funcionalidades Premium</h2>
+                <span class="premium-badge">Plus</span>
+            </div>
+            <div class="premium-content">
+                <div class="premium-grid">
+                    <div class="premium-item">
+                        <div class="premium-icon">📊</div>
+                        <h3>Análise Nutricional</h3>
+                        <p>Relatórios detalhados de macronutrientes</p>
+                    </div>
+                    <div class="premium-item">
+                        <div class="premium-icon">💰</div>
+                        <h3>Controle Financeiro</h3>
+                        <p>Monitore gastos e economize no mercado</p>
+                    </div>
+                    <div class="premium-item">
+                        <div class="premium-icon">📈</div>
+                        <h3>Histórico e Tendências</h3>
+                        <p>Acompanhe sua evolução com gráficos</p>
+                    </div>
+                    <div class="premium-item">
+                        <div class="premium-icon">🎯</div>
+                        <h3>Planos Personalizados</h3>
+                        <p>Cardápios adaptados aos seus objetivos</p>
+                    </div>
+                </div>
+                <div class="premium-cta">
+                    <p>Desbloqueie essas funcionalidades e muito mais!</p>
+                    <a href="planos.html" class="btn btn-premium">Ver Planos Premium</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-2">
+            <a href="index.html" class="btn btn-secondary">Sair</a>
+        </div>
+    </div>
+
+    <script src="js/planner.js"></script>
+</body>
+</html>

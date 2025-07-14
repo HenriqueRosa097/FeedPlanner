@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeedPlanner - Nutricionistas</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/nutricionistas.css">
+</head>
+<body>
+    <header>
+        <h1>FeedPlanner</h1>
+        <p>Planejamento alimentar e financeiro inteligente</p>
+    </header>
+
+    <nav>
+        <ul>                <li><a href="index.html">Login</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="nutricionistas.html">Nutricionistas</a></li>
+                <li><a href="meu-planner.html">Meu Planner</a></li>
+                <li><a href="planos.html">Planos</a></li>
+            </ul>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h2 class="text-center mb-2">Nutricionistas Disponíveis</h2>
+            <p class="text-center">Conecte-se com profissionais qualificados para orientação personalizada</p>
+        </div>
+
+        <div id="loading" class="text-center">
+            <p>Carregando nutricionistas...</p>
+        </div>
+
+        <div id="nutricionistas-container" class="grid grid-3 hidden">
+            <!-- Os nutricionistas serão carregados aqui via JavaScript -->
+        </div>
+
+        <div id="error-message" class="message error hidden">
+            Erro ao carregar nutricionistas. Tente novamente mais tarde.
+        </div>
+    </div>
+
+    <script src="js/nutricionistas.js?v=2"></script>
+</body>
+</html>

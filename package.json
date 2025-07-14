@@ -1,0 +1,17 @@
+{
+  "name": "feedplanner",
+  "version": "1.0.0",
+  "description": "FeedPlanner - Planejamento alimentar e financeiro",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "vercel dev",
+    "build": "echo 'Build completed'",
+    "deploy": "vercel"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14"
+  }
+}

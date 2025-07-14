@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeedPlanner - Cadastro e IMC</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+</head>
+<body>
+    <header>
+        <h1>FeedPlanner</h1>
+        <p>Planejamento alimentar e financeiro inteligente</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Login</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="cadastro.html">Cadastro</a></li>
+            <li><a href="nutricionistas.html">Nutricionistas</a></li>
+            <li><a href="meu-planner.html">Meu Planner</a></li>
+            <li><a href="planos.html">Planos</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="grid grid-2">
+            <div class="card">
+                <h2 class="mb-2">Cadastro de Dados Pessoais</h2>
+                
+                <form id="cadastro-form">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="idade">Idade:</label>
+                        <input type="number" id="idade" name="idade" min="1" max="120" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="peso">Peso (kg):</label>
+                        <input type="number" id="peso" name="peso" step="0.1" min="1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="altura">Altura (m):</label>
+                        <input type="number" id="altura" name="altura" step="0.01" min="0.5" max="2.5" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sexo">Sexo:</label>
+                        <select id="sexo" name="sexo" required>
+                            <option value="">Selecione...</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn" style="width: 100%;">Salvar Dados</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <h2 class="mb-2">Cálculo do IMC</h2>
+                
+                <div id="imc-result" class="imc-container">
+                    <p>Preencha seu peso e altura para calcular o IMC automaticamente.</p>
+                </div>
+
+                <div class="imc-table mt-2">
+                    <h3>Classificação do IMC:</h3>
+                    <table>
+                        <tr>
+                            <td>Abaixo de 18,5</td>
+                            <td>Abaixo do peso</td>
+                        </tr>
+                        <tr>
+                            <td>18,5 - 24,9</td>
+                            <td>Peso normal</td>
+                        </tr>
+                        <tr>
+                            <td>25,0 - 29,9</td>
+                            <td>Sobrepeso</td>
+                        </tr>
+                        <tr>
+                            <td>30,0 - 34,9</td>
+                            <td>Obesidade grau I</td>
+                        </tr>
+                        <tr>
+                            <td>35,0 - 39,9</td>
+                            <td>Obesidade grau II</td>
+                        </tr>
+                        <tr>
+                            <td>≥ 40,0</td>
+                            <td>Obesidade grau III</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-2">
+            <a href="index.html" class="btn btn-secondary">Voltar ao Login</a>
+        </div>
+    </div>
+
+    <script src="js/cadastro.js"></script>
+</body>
+</html>
